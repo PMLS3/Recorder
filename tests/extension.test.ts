@@ -131,9 +131,7 @@ test('can click through recording steps and it generates the right code', async 
     expect.stringContaining("import { test, expect } from '@playwright/test'")
   );
   expect(content).toEqual(
-    expect.stringContaining(
-      "test('Written with DeploySentinel Recorder', async ({ page }) =>"
-    )
+    expect.stringContaining("test('Written with Recorder', async ({ page }) =>")
   );
   expect(content).toEqual(
     expect.stringContaining("page.click('#searchInput');")

@@ -1,7 +1,7 @@
 // save button to save content to firebase
 import React, { useState } from 'react';
-import 'firebase/firestore';
-import { db } from '../../firebase.js';
+import { db } from '../../firebase';
+const { collection, addDoc } = require('firebase/firestore');
 
 const MyComponent: React.FC = () => {
   const [inputValue, setInputValue] = useState('');
@@ -10,20 +10,17 @@ const MyComponent: React.FC = () => {
     setInputValue(e.target.value);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (inputValue) {
-      // Save data to Firebase
-      db.collection('myCollection')
-        .add({ value: inputValue })
-        .then(() => {
-          console.log('Data successfully saved to Firebase!');
-          setInputValue('');
-        })
-        .catch((error) => {
-          console.error('Error saving data to Firebase:', error);
-        });
+      // Save data to Firebase v9
+      // Add a new document with a generated id.
+      const docRef = await addDoc(collection(db, 'cities'), {
+        name: 'Tokyo',
+        country: 'Japan',
+      });
+      console.log('Document written with ID: ', docRef.id);
     }
   };
 

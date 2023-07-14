@@ -441,9 +441,7 @@ export class PlaywrightScriptBuilder extends ScriptBuilder {
   buildScript = () => {
     return `import { test, expect } from '@playwright/test';
 
-test('Written with DeploySentinel Recorder', async ({ page }) => {${this.codes.join(
-      ''
-    )}});`;
+test('Written with Recorder', async ({ page }) => {${this.codes.join('')}});`;
   };
 }
 
@@ -685,9 +683,7 @@ export class CypressScriptBuilder extends ScriptBuilder {
   };
 
   buildScript = () => {
-    return `it('Written with DeploySentinel Recorder', () => {${this.codes.join(
-      ''
-    )}});`;
+    return `it('Written with Recorder', () => {${this.codes.join('')}});`;
   };
 }
 

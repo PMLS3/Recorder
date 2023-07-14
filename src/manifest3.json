@@ -1,8 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "DeploySentinel Recorder",
+  "name": "Recorder",
   "description": "Record browser interactions to auto generate Cypress, Playwright and Puppeteer test scripts.",
-  "background": { "service_worker": "background.bundle.js" },
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": "Icon32.png"
