@@ -25,6 +25,7 @@ import {
 } from '../Common/utils';
 import { usePreferredLibrary, useRecordingState } from '../Common/hooks';
 import ScriptTypeSelect from '../Common/ScriptTypeSelect';
+import SaveFirebase from '../Common/SaveFirebase';
 
 import type { Action } from '../types';
 import { ActionsMode, ScriptType } from '../types';
@@ -89,6 +90,7 @@ function LastStepPanel({
               onChange={(val) => setPreferredLibrary(val)}
               value={displayedScriptType}
             />
+            - <SaveFirebase />-
             <CopyToClipboard
               text={genCode(actions, true, displayedScriptType)}
               onCopy={() => {
@@ -249,6 +251,7 @@ const Popup = () => {
                   href="https://www.deploysentinel.com/docs/recorder"
                   target="_blank"
                   className="text-button text-decoration-none text-sm text-grey"
+                  rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faInfoCircle} className="mr-1" /> Docs
                 </a>
@@ -319,6 +322,7 @@ const Popup = () => {
                         href="https://deploysentinel.com?utm_source=rcd&utm_medium=bnr"
                         target="_blank"
                         className="link-button text-decoration-none fw-bold mr-5"
+                        rel="noreferrer"
                       >
                         Learn More
                       </a>

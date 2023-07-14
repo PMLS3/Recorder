@@ -404,7 +404,7 @@ export default function ControlBar({ onExit }: { onExit: () => void }) {
                           icon={copyCodeConfirm ? faCheck : faCopy}
                           size="sm"
                         />{' '}
-                        Copy Code
+                        Copy Code -
                       </span>
                     </CopyToClipboard>
                   </>
