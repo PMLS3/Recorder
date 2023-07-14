@@ -26,7 +26,7 @@ const MyComponent: React.FC = () => {
       // Save data to Firebase v9
       // Add a new document with a generated id.
       const docRef = await addDoc(collection(db, 'chrome-recorder'), {
-        name: inputValue,
+        title: inputValue,
         actions: actions,
         library: library,
         code: code,
