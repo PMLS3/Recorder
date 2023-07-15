@@ -1,7 +1,7 @@
 # Recorder
 
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/geggbdbnidkhbnbjoganapfhkpgkndfo?color=8F57F3&label=Chrome%20Rating)
-![Tests](https://github.com/DeploySentinel/Recorder/actions/workflows/main.yml/badge.svg)
+![Tests](https://github.com/QuickSellRecorder/Recorder/actions/workflows/main.yml/badge.svg)
 
 A Browser Extension that generates Cypress, Playwright and Puppeteer scripts
 automatically from your browser interactions.
@@ -10,11 +10,11 @@ Simply step through your website while recording with Recorder and the extension
 will convert the captured user flow into a Cypress, Playwright or Puppeteer
 script.
 
-[![Chrome Store Icon](assets/ChromeStoreIcon.png)](https://chrome.google.com/webstore/detail/deploysentinel-recorder/geggbdbnidkhbnbjoganapfhkpgkndfo)
-[![Firefox Addon Icon](assets/FirefoxAddonIcon.png)](https://addons.mozilla.org/en-US/firefox/addon/deploysentinel-recorder/)
+[![Chrome Store Icon](assets/ChromeStoreIcon.png)](https://chrome.google.com/webstore/detail/QuickSellRecorder-recorder/geggbdbnidkhbnbjoganapfhkpgkndfo)
+[![Firefox Addon Icon](assets/FirefoxAddonIcon.png)](https://addons.mozilla.org/en-US/firefox/addon/QuickSellRecorder-recorder/)
 
 Looking for a Cypress Studio alternative? Check out our
-[Cypress Recorder Plugin](https://github.com/DeploySentinel/cypress-recorder).
+[Cypress Recorder Plugin](https://github.com/QuickSellRecorder/cypress-recorder).
 
 # Demo
 
@@ -42,7 +42,7 @@ Looking for a Cypress Studio alternative? Check out our
 
    - Right-click an element and select "Record hover over element" to record a
      hover event over an element.
-   - Highlight any text on the page, right-click and select "DeploySentinel
+   - Highlight any text on the page, right-click and select "QuickSellRecorder
      Recorder" > "Assert/wait for selected text" to add a text-based assertion.
 
 5. Click "End Test" whenever you are done. You can copy the generated script via
@@ -94,8 +94,8 @@ Run E2E Tests: `yarn test`
 
 ---
 
-## Made with ❤️ by [DeploySentinel](https://deploysentinel.com)
+## Made with ❤️ by [QuickSellRecorder](https://QuickSellRecorder.com)
 
-Use DeploySentinel to save hours of failed Cypress test debugging by using DOM,
-network, and console events captured from your CI.
-[Learn more.](https://deploysentinel.com)
+Use QuickSellRecorder to save hours of failed Cypress test debugging by using
+DOM, network, and console events captured from your CI.
+[Learn more.](https://QuickSellRecorder.com)

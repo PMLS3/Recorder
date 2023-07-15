@@ -9,10 +9,10 @@ const target = document.body.appendChild(document.createElement('DIV'));
 
 declare global {
   interface Window {
-    __DEPLOYSENTINEL_CLEAN_UP: () => void;
-    __DEPLOYSENTINEL_SCRIPT: boolean | null;
+    __QuickSellRecorder_CLEAN_UP: () => void;
+    __QuickSellRecorder_SCRIPT: boolean | null;
     wrappedJSObject: {
-      __DEPLOYSENTINEL_SCRIPT: boolean;
+      __QuickSellRecorder_SCRIPT: boolean;
     };
   }
   function exportFunction(fn: Function, scope: Window, opts: any): void;
@@ -20,23 +20,23 @@ declare global {
 
 // Expose a clean up function after a test completes
 function cleanUp() {
-  window.__DEPLOYSENTINEL_SCRIPT = null;
+  window.__QuickSellRecorder_SCRIPT = null;
   // @ts-ignore - the typing doesn't like shadow roots for some reason
   unmountComponentAtNode(target.shadowRoot);
 }
 
 // Expose clean up to window
-window.__DEPLOYSENTINEL_CLEAN_UP = cleanUp;
+window.__QuickSellRecorder_CLEAN_UP = cleanUp;
 // For firefox
 if (typeof exportFunction === 'function') {
-  exportFunction(cleanUp, window, { defineAs: '__DEPLOYSENTINEL_CLEAN_UP' });
+  exportFunction(cleanUp, window, { defineAs: '__QuickSellRecorder_CLEAN_UP' });
 }
 
-if (window.__DEPLOYSENTINEL_SCRIPT == null) {
-  window.__DEPLOYSENTINEL_SCRIPT = true;
+if (window.__QuickSellRecorder_SCRIPT == null) {
+  window.__QuickSellRecorder_SCRIPT = true;
   // For firefox
   if (window.wrappedJSObject != null) {
-    window.wrappedJSObject.__DEPLOYSENTINEL_SCRIPT = true;
+    window.wrappedJSObject.__QuickSellRecorder_SCRIPT = true;
   }
 
   target.attachShadow({ mode: 'open' });

@@ -27,7 +27,7 @@ function waitForServiceWorkers(
 let extensionId = '';
 let browserContext: BrowserContext | null = null;
 beforeAll(async () => {
-  const userDataDir = '/tmp/deploysentinel-recorder-test-user-data-dir';
+  const userDataDir = '/tmp/QuickSellRecorder-recorder-test-user-data-dir';
   browserContext = await playwright['chromium'].launchPersistentContext(
     userDataDir,
     {

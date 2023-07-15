@@ -144,8 +144,8 @@ export async function executeCleanUp(tabId: number, frameId: number) {
     await browser.tabs.executeScript(tabId, {
       frameId,
       code: `
-        if (typeof window?.__DEPLOYSENTINEL_CLEAN_UP === 'function') {
-          window.__DEPLOYSENTINEL_CLEAN_UP();
+        if (typeof window?.__QuickSellRecorder_CLEAN_UP === 'function') {
+          window.__QuickSellRecorder_CLEAN_UP();
         }
       `,
     });
@@ -153,8 +153,8 @@ export async function executeCleanUp(tabId: number, frameId: number) {
     await chrome.scripting.executeScript({
       target: { tabId, frameIds: [frameId] },
       func: () => {
-        if (typeof window?.__DEPLOYSENTINEL_CLEAN_UP === 'function') {
-          window.__DEPLOYSENTINEL_CLEAN_UP();
+        if (typeof window?.__QuickSellRecorder_CLEAN_UP === 'function') {
+          window.__QuickSellRecorder_CLEAN_UP();
         }
       },
     });

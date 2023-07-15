@@ -83,12 +83,12 @@ const retrySelector = (selector: string, maxRetries: number) => {
 
   // Prevent the button from being mounted multiple times (bug in FF)
   if (
-    document.getElementById('deploysentinel-cypress-trigger-button') != null
+    document.getElementById('QuickSellRecorder-cypress-trigger-button') != null
   ) {
     return;
   }
   const newElem = document.createElement('div');
-  newElem.id = 'deploysentinel-cypress-trigger-button';
+  newElem.id = 'QuickSellRecorder-cypress-trigger-button';
   const target = urlBar.insertBefore(newElem, selectorPlaygroundButton);
   target.attachShadow({ mode: 'open' });
   render(

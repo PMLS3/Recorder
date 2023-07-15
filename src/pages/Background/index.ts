@@ -9,8 +9,8 @@ import {
   executeCleanUp,
 } from '../Common/utils';
 
-const HOVER_CTX_MENU_ID = 'deploysentinel-menu-id';
-const AWAIT_TEXT_CTX_MENU_ID = 'deploysentinel-menu-await-text-id';
+const HOVER_CTX_MENU_ID = 'QuickSellRecorder-menu-id';
+const AWAIT_TEXT_CTX_MENU_ID = 'QuickSellRecorder-menu-await-text-id';
 
 async function recordNavigationEvent(
   url: string,
@@ -82,7 +82,7 @@ chrome.runtime.onMessage.addListener(async function (
 
     setStartRecordingStorage(tabId, 0, newUrl, testEditorTabId);
   } else if (request.type === 'forward-recording') {
-    // Focus the original deploysentinel webapp tab post-recording
+    // Focus the original QuickSellRecorder webapp tab post-recording
     chrome.tabs.update(request.tabId, { active: true });
 
     chrome.tabs.sendMessage(request.tabId, {

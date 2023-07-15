@@ -3,7 +3,7 @@ import React from 'react';
 export default function Logo() {
   return (
     <a
-      href="https://www.deploysentinel.com?utm_source=rcd&utm_medium=logo"
+      href="https://www.QuickSellRecorder.com?utm_source=rcd&utm_medium=logo"
       target="_blank"
       className="text-decoration-none"
     >
@@ -16,7 +16,7 @@ export default function Logo() {
           userSelect: 'none',
         }}
       >
-        DeploySentinel
+        QuickSellRecorder
       </div>
     </a>
   );

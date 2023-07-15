@@ -248,7 +248,7 @@ const Popup = () => {
               <Logo />
               <div>
                 <a
-                  href="https://www.deploysentinel.com/docs/recorder"
+                  href="https://www.QuickSellRecorder.com/docs/recorder"
                   target="_blank"
                   className="text-button text-decoration-none text-sm text-grey"
                   rel="noreferrer"
@@ -311,7 +311,7 @@ const Popup = () => {
                   >
                     <div className="fw-bold">
                       <FontAwesomeIcon icon={faInfoCircle} className="mr-2" />
-                      Fix Flaky Cypress Tests w/ DeploySentinel
+                      Fix Flaky Cypress Tests w/ QuickSellRecorder
                     </div>
                     <div className="mt-4" style={{ lineHeight: '1.5rem' }}>
                       Save time debugging test failures & flakes using DOM,
@@ -319,7 +319,7 @@ const Popup = () => {
                     </div>
                     <div className="mt-4">
                       <a
-                        href="https://deploysentinel.com?utm_source=rcd&utm_medium=bnr"
+                        href="https://QuickSellRecorder.com?utm_source=rcd&utm_medium=bnr"
                         target="_blank"
                         className="link-button text-decoration-none fw-bold mr-5"
                         rel="noreferrer"

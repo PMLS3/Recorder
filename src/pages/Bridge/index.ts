@@ -2,15 +2,15 @@ function originFromWebapp(origin: string) {
   const originURL = new URL(origin);
   return (
     originURL.hostname === 'localhost' ||
-    originURL.hostname === 'deploysentinel.com' ||
-    originURL.hostname.indexOf('.deploysentinel.com') > -1
+    originURL.hostname === 'QuickSellRecorder.com' ||
+    originURL.hostname.indexOf('.QuickSellRecorder.com') > -1
   );
 }
 
 window.addEventListener('message', (event) => {
   const data = event?.data ?? {};
   if (
-    data?.source === 'deploysentinel-test-editor' &&
+    data?.source === 'QuickSellRecorder-test-editor' &&
     data?.type === 'start-recording' &&
     originFromWebapp(event.origin)
   ) {
@@ -18,12 +18,12 @@ window.addEventListener('message', (event) => {
   }
 
   if (
-    data?.source === 'deploysentinel-test-editor' &&
+    data?.source === 'QuickSellRecorder-test-editor' &&
     data?.type === 'ping' &&
     originFromWebapp(event.origin)
   ) {
     window.postMessage({
-      source: 'deploysentinel-recorder',
+      source: 'QuickSellRecorder-recorder',
       type: 'pong',
     });
   }
@@ -32,7 +32,7 @@ window.addEventListener('message', (event) => {
 chrome.runtime.onMessage.addListener(async function (request) {
   if (request?.type === 'playwright-test-recording') {
     window.postMessage({
-      source: 'deploysentinel-recorder',
+      source: 'QuickSellRecorder-recorder',
       type: 'playwright-test-recording',
       code: request?.code,
       actions: request?.actions,

@@ -1,5 +1,5 @@
 {
-  "name": "deploysentinel-recorder",
+  "name": "QuickSellRecorder-recorder",
   "version": "0.7.1",
   "description": "A browser extension that generates Cypress, Playwright and Puppeteer scripts automatically from your browser interactions.",
   "license": "Apache-2.0",
@@ -23,6 +23,7 @@
     "@types/react": "^17.0.2",
     "@types/react-copy-to-clipboard": "^5.0.1",
     "@types/react-dom": "^17.0.1",
+    "firebase": "^10.0.0",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "react": "^17.0.2",

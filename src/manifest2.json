@@ -22,7 +22,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.deploysentinel.com/*"],
+      "matches": ["https://*.QuickSellRecorder.com/*"],
       "js": ["bridge.bundle.js"]
     },
     {
